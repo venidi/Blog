@@ -15,9 +15,6 @@ import org.springframework.web.servlet.view.script.ScriptTemplateConfig;
 
 import java.util.List;
 
-/**
- * Created by venidi on 16-8-19.
- */
 @Controller
 public class MainController {
     boolean isLogin = false;
@@ -59,7 +56,7 @@ public class MainController {
     //管理博文
     @RequestMapping(value = "/root/blogs",method = RequestMethod.GET)
     public String showBlogs(ModelMap modelMap){
-        if (isLogin==true) {
+        if (isLogin) {
             List<BlogsEntity> blogList = blogRepository.findAll();
             modelMap.addAttribute("blogList", blogList);
             isLogin = false;

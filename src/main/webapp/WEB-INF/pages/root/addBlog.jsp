@@ -17,13 +17,13 @@
     <title>添加博客</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container">
     <h1 class="text-center">添加博客</h1>
     <hr/>
-    <form:form action="/root/blogs/addP" method="post" commandName="blog" role="form">
+    <form:form action="${pageContext.request.contextPath}/root/blogs/addP" method="post" commandName="blog" role="form">
         <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title:"/>
@@ -53,9 +53,9 @@
     </form:form>
 </div>
 <%--!-- jQuery文件。务必在bootstrap.min.js 之前引入 --%>
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

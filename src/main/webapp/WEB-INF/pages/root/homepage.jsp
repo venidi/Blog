@@ -15,11 +15,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>My Blog</title>
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <body>
 <div class="container">
     <h1>Venidi</h1>
-    <span class="pull-right"><a href="/root/homepage/login" type="button" class="btn btn-primary btn-sm">Login</a> </span>
+    <span class="pull-right"><a href="${pageContext.request.contextPath}/root/homepage/login" type="button" class="btn btn-primary btn-sm">Login</a> </span>
     <%--如果列表为空--%>
     <c:if test="${empty blogList}">
         <div class="alert alert-warning" role="alert">
@@ -35,7 +35,7 @@
 
             <c:forEach items="${blogList}" var="blog">
                 <tr>
-                    <td><a href="/root/blogs/show/${blog.id}">${blog.title}</a> </td>
+                    <td><a href="${pageContext.request.contextPath}/root/blogs/show/${blog.id}">${blog.title}</a> </td>
                     <td class="text-center">${blog.kinds}</td>
                 </tr>
             </c:forEach>
@@ -43,10 +43,10 @@
     </c:if>
 
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </div>
 </body>
 </html>

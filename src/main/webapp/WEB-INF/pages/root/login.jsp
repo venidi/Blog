@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
     <div id="loginModal" class="modal show">
@@ -21,7 +21,7 @@
                     <h1 class="text-center text-primary">登录</h1>
                 </div>
                 <div class="modal-body">
-                    <form:form  action="/root/homepage/loginP"  method="post" commandName="user" role="form">
+                    <form:form  action="${pageContext.request.contextPath}/root/homepage/loginP"  method="post" commandName="user" role="form">
                         <div class="form-group">
                             <div class="col-sm-10 center-block">
                                 <input type="text" class="form-control input-lg" id="username" name="username" placeholder="Username">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
 
 </body>

@@ -19,17 +19,17 @@
     <title>修改博客</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 
 </head>
 <body>
 <div class="container">
     <h1 class="text-center">修改博客</h1>
     <hr>
-    <form:form action="/root/blogs/updateP" method="post" commandName="blogP" role="form">
+    <form:form action="${pageContext.request.contextPath}/root/blogs/updateP" method="post" commandName="blogP" role="form">
         <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" class="form-control" id="title" name="title" value="${blogsEntity.title}" />
